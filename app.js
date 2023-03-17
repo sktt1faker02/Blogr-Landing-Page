@@ -1,6 +1,12 @@
 let listElements = document.querySelectorAll(".link");
 const navIcon = document.querySelector(".navIcon");
 
+navIcon.addEventListener("click", () => {
+  document.querySelector(".header-menu").classList.toggle("open");
+  document.querySelector(".navImg").classList.toggle("nav-icon");
+  document.querySelector("body").classList.toggle("blur");
+});
+
 listElements.forEach((listElement) => {
   listElement.addEventListener("click", () => {
     if (listElement.classList.contains("active")) {

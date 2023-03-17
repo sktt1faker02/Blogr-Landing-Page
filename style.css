@@ -207,6 +207,28 @@ header {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
+.header-menu {
+  transform: translateX(-120%);
+  transition: 0.3s linear;
+}
+
+.blur::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100%;
+
+  backdrop-filter: blur(8px);
+}
+
+.open {
+  transform: translateX(0%);
+}
+
+.nav-icon {
+  content: url(./images/icon-close.svg);
+}
+
 .dropdown-container {
   display: flex;
   flex-direction: column;
