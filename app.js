@@ -4,7 +4,7 @@ const navIcon = document.querySelector(".navIcon");
 navIcon.addEventListener("click", () => {
   document.querySelector(".header-menu").classList.toggle("open");
   document.querySelector(".navImg").classList.toggle("nav-icon");
-  document.querySelector("body").classList.toggle("blur");
+  document.querySelector("body").classList.toggle("prevent-scroll");
 });
 
 listElements.forEach((listElement) => {

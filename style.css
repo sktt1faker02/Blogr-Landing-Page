@@ -112,6 +112,7 @@ main {
 
 .flex-reverse {
   flex-wrap: wrap-reverse;
+  justify-content: center;
 }
 
 .flex-wrap {
@@ -158,9 +159,12 @@ main {
 }
 
 header {
-  background: var(--gradient-bkg);
-  z-index: -1;
-  overflow: hidden;
+  /* background-image: url(./images/bg-pattern-intro-mobile.svg); */
+  background-image: url(./images/bg-pattern-intro-mobile.svg),
+    var(--gradient-bkg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
   border-bottom-left-radius: 6rem;
 }
 
@@ -195,7 +199,7 @@ header {
   flex-direction: column;
   background-color: var(--bkg);
   padding: 2rem 0;
-  position: absolute;
+  position: fixed;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -212,14 +216,20 @@ header {
   transition: 0.3s linear;
 }
 
-.blur::before {
+.prevent-scroll {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* .blur::before {
   content: "";
-  position: absolute;
-  width: 80%;
+  position: relative;
+  width: 100%;
   height: 100%;
 
   backdrop-filter: blur(8px);
-}
+} */
 
 .open {
   transform: translateX(0%);
@@ -259,14 +269,6 @@ header {
   font-weight: 700;
   font-size: 1.2rem;
 }
-
-/* header .bkg {
-  position: absolute;
-  z-index: 1;
-  transform: scale(3.5);
-  top: 1rem;
-  right: -4rem;
-} */
 
 .submenuItems {
   display: none;
